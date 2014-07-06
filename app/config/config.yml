@@ -1,0 +1,12 @@
+services:
+  app:
+    class: 'Symfony\Component\Console\Application'
+    calls:
+      - ['addCommands', [#console_commands]]
+
+  command.foo:
+    class: 'Command\FooCommand'
+    tags: console_commands
+  command.bar:
+    class: 'Command\BarCommand'
+    tags: console_commands
