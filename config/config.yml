@@ -2,7 +2,7 @@ services:
   app:
     class: 'Symfony\Component\Console\Application'
     calls:
-      - ['addCommands', [#console_commands]]
+      - ['addCommands', ['#console_commands']]
 
   command.foo:
     class: 'Command\FooCommand'
